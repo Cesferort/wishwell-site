@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es" translate="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacidad - Wishwell for Steam</title>
+  <meta name="description" content="Qué guarda Wishwell for Steam, dónde lo guarda y a qué servicios se conecta. Sin servidor, sin cuentas y sin analítica.">
+  <link rel="canonical" href="https://cesferort.github.io/wishwell-site/privacy/es.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Privacidad - Wishwell for Steam">
+  <meta property="og:description" content="Qué guarda Wishwell for Steam, dónde lo guarda y a qué servicios se conecta. Sin servidor, sin cuentas y sin analítica.">
+  <meta property="og:url" content="https://cesferort.github.io/wishwell-site/privacy/es.html">
+  <meta property="og:image" content="https://cesferort.github.io/wishwell-site/art/share-2026-11.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="El arco y el brocal de Wishwell, dentro de una moneda.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../art/favicon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="scene" aria-hidden="true"></div>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="bar panel-box">
+    <a class="home" href="https://cesferort.github.io/" target="_blank" rel="noopener">
+      <span class="home-arrow" aria-hidden="true"></span>Cesferort
+    </a>
+    <input class="menu-check" id="menu-check" type="checkbox">
+    <label class="menu-toggle" for="menu-check"><span class="visually-hidden">Menú</span><span class="burger" aria-hidden="true"></span></label>
+    <nav class="nav" aria-label="Páginas">
+      <a href="../index.html">Inicio</a>
+      <a href="es.html" aria-current="page">Privacidad</a>
+      <span class="langs">
+        <a href="es.html" lang="es" aria-current="page" class="flag flag-es" aria-label="Español"><svg class="flag-svg" viewBox="0 0 22 15" aria-hidden="true"><rect width="22" height="15" fill="#c60b1e"/><rect y="4" width="22" height="7" fill="#ffc400"/></svg></a>
+        <a href="eu.html" lang="eu" hreflang="eu" class="flag flag-eu" aria-label="Euskera"><svg class="flag-svg" viewBox="0 0 22 15" aria-hidden="true"><rect width="22" height="15" fill="#da291c"/><path fill="#009b48" d="M0 0h4.2L22 12.2V15h-4.2L0 2.8z"/><path fill="#009b48" d="M22 0h-4.2L0 12.2V15h4.2L22 2.8z"/><rect x="9.2" width="3.6" height="15" fill="#fff"/><rect y="5.7" width="22" height="3.6" fill="#fff"/></svg></a>
+        <a href="en.html" lang="en" hreflang="en" class="flag flag-en" aria-label="Inglés"><svg class="flag-svg" viewBox="0 0 60 30" aria-hidden="true"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#fff" stroke-width="6" d="M0 0l60 30m0-30L0 30"/><path stroke="#C8102E" stroke-width="4" d="M0 0l60 30m0-30L0 30"/><path stroke="#fff" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="#C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></svg></a>
+      </span>
+    </nav>
+  </header>
+  <main id="contenido">
+    <article class="panel panel-box page">
+      <h1>Política de privacidad</h1>
+      <p class="updated">Wishwell for Steam · actualizada el 20 de noviembre de 2026</p>
+
+      <h2>Lo esencial</h2>
+      <p>Wishwell no tiene servidor. No hay cuenta que crear, no hay nada que iniciar sesión y no se recoge analítica de ningún tipo. Todo lo que la extensión guarda se queda en tu navegador, y las únicas conexiones que hace son las consultas de precios y datos que necesita para rellenar el panel.</p>
+      <p>Yo no recibo información sobre qué juegos tienes en tu lista, qué buscas o qué compras.</p>
+
+      <h2>Qué se guarda, y dónde</h2>
+      <p>En los <strong>ajustes sincronizados del navegador</strong> (<code>chrome.storage.sync</code>): tus preferencias (tema, densidad, idioma, región de precios, orden por defecto, filtros, avisos) y, si decides usarla, tu clave de IsThereAnyDeal. Chrome los copia entre tus dispositivos con tu cuenta de Google. Yo no los veo.</p>
+      <p>En el <strong>almacenamiento local del navegador</strong> (<code>chrome.storage.local</code>): una copia temporal de la lista de deseos que estás viendo y la caché de las respuestas de las fuentes de datos, para no repetir peticiones. Esto no sale de tu equipo y se borra con el botón de vaciar caché en Opciones, o al desinstalar la extensión.</p>
+
+      <h2>Permisos, y por qué</h2>
+      <ul>
+        <li><strong><code>storage</code></strong> - guardar lo de arriba.</li>
+        <li><strong><code>alarms</code></strong> - programar la comprobación periódica de ofertas. Sin esto, los avisos de precio no pueden existir.</li>
+        <li><strong><code>notifications</code></strong> - mostrar ese aviso cuando un juego baja de precio. Sólo se usa si tú activas los avisos.</li>
+        <li><strong><code>tabs</code></strong> - localizar las pestañas abiertas en tu lista de deseos para refrescar el panel, y abrir la pestaña correspondiente cuando pulsas una notificación. No se lee tu historial ni las pestañas de otras páginas.</li>
+        <li><strong><code>scripting</code></strong> - inyectar el panel si el mecanismo normal de Chrome no llega a hacerlo en esa pestaña. Es una vía de respaldo, y sólo apunta a la página de lista de deseos de Steam.</li>
+        <li><strong><code>cookies</code></strong> - leer exactamente dos cookies de Steam, y ninguna más. <code>steamLoginSecure</code>, de la que se extrae <em>sólo</em> tu identificador numérico de 17 dígitos, para saber de quién es la lista que hay que pedir; el resto del valor, que es el testigo de sesión, se descarta en el acto y no se guarda ni se envía a ninguna parte. Y <code>steamCountry</code>, para enseñarte los precios en la moneda y la región que Steam ya te está aplicando, en vez de dólares por defecto.</li>
+        <li><strong><code>declarativeNetRequestWithHostAccess</code></strong> - ajustar unas cabeceras que el navegador no deja poner a mano, en las consultas a HowLongToBeat y a CheapShark. Sólo afecta a lo que pide la propia extensión. Tu navegación normal no se toca.</li>
+      </ul>
+
+      <h2>A qué servicios se conecta</h2>
+      <p>Siempre desde tu navegador, nunca a través de un intermediario:</p>
+      <ul>
+        <li><strong>Steam</strong> (<code>store.steampowered.com</code>, <code>api.steampowered.com</code>, <code>steamcommunity.com</code> y sus CDN) - tu lista de deseos pública, los datos de cada juego, los precios de tu región y las imágenes.</li>
+        <li><strong>HowLongToBeat</strong> - cuánto dura cada juego. Se consulta por nombre.</li>
+        <li><strong>CheapShark</strong> - ofertas en otras tiendas. Se consulta por identificador de Steam.</li>
+        <li><strong>ProtonDB</strong> - la valoración de compatibilidad con Linux y Steam Deck.</li>
+        <li><strong>IsThereAnyDeal</strong> - opcional, y sólo si pegas tu propia clave gratuita en Opciones. Si el campo está vacío, la extensión no contacta con ellos nunca.</li>
+      </ul>
+      <p>A estos servicios sólo les llega lo imprescindible para responder: identificadores o nombres de juegos y, en el caso de Steam, tu identificador público. Ninguno recibe tus preferencias ni tus claves, salvo IsThereAnyDeal, que recibe la suya porque es la forma de autenticarte ante ellos. Cada uno tiene su propia política de privacidad y Wishwell no controla lo que hagan con las peticiones que reciben.</p>
+
+      <h2>Lo que no se hace</h2>
+      <ul>
+        <li>No hay analítica, ni telemetría, ni seguimiento de uso.</li>
+        <li>No se vende, alquila ni comparte ningún dato, porque no se recoge ninguno.</li>
+        <li>No hay publicidad, ni enlaces de afiliado, ni nada que cambie dónde acabas comprando.</li>
+        <li>Sólo miro la pestaña de tu lista de deseos de Steam. El resto de páginas no las leo.</li>
+      </ul>
+
+      <h2>Cómo borrarlo todo</h2>
+      <p>Vaciar la caché y quitar la clave desde Opciones deja la extensión como recién instalada. Desinstalarla borra absolutamente todo lo que haya guardado, incluidos los ajustes sincronizados.</p>
+
+      <h2>Cambios y contacto</h2>
+      <p>Si esta política cambia, cambia también la fecha de arriba. El código es GPL-3.0 y cualquiera puede comprobar que lo que aquí se dice es lo que hace.</p>
+      <p>Para cualquier duda sobre privacidad, o para pedir acceso, rectificación o borrado de algo que creas que te afecta, escribe a <a href="mailto:cesferort99@gmail.com">cesferort99@gmail.com</a>. Soy César Ferreiro. Quién soy y qué hago está en <a href="https://cesferort.github.io/about/es.html" target="_blank" rel="noopener">mi página</a>.</p>
+
+      <p class="legal-note">Wishwell for Steam no es un producto de Valve Corporation. Steam y Steam Deck son marcas de Valve Corporation.</p>
+    </article>
+  </main>
+  <footer>
+    <p>© 2026 César Ferreiro · <a href="../index.html">Wishwell for Steam</a></p>
+  </footer>
+</body>
+</html>

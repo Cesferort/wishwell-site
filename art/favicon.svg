@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Wishwell">
+  <rect width="32" height="32" rx="7" fill="#1b2838"/>
+  <g fill="#66c0f4" transform="translate(4 4)">
+    <path d="M 5 13.4 L 5 9.2 L 7.8 6.4 L 16.2 6.4 L 19 9.2 L 19 13.4 L 15.8 13.4 L 15.8 10.4 L 8.2 10.4 L 8.2 13.4 Z"/>
+    <path d="M 10.7 4.2 H 13.3 V 6.4 H 10.7 Z"/>
+    <path d="M 10.5 13.4 H 13.5 V 15.9 H 10.5 Z"/>
+    <path d="M 8.2 15.9 H 15.8 V 18.2 H 8.2 Z"/>
+    <path d="M 3.2 19.4 H 20.8 L 19.1 22.6 H 4.9 Z"/>
+    <path d="M 6.2 20.2 H 17.8 L 16.8 21.8 H 7.2 Z" fill="#1b2838"/>
+  </g>
+</svg>

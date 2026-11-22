@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy - Wishwell for Steam</title>
+  <meta name="description" content="What Wishwell for Steam stores, where it stores it, and which services it talks to. No server, no accounts, no analytics.">
+  <link rel="canonical" href="https://cesferort.github.io/wishwell-site/privacy/en.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Privacy - Wishwell for Steam">
+  <meta property="og:description" content="What Wishwell for Steam stores, where it stores it, and which services it talks to. No server, no accounts, no analytics.">
+  <meta property="og:url" content="https://cesferort.github.io/wishwell-site/privacy/en.html">
+  <meta property="og:image" content="https://cesferort.github.io/wishwell-site/art/share-2026-11.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Wishwell arch and rim, set inside a coin.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../art/favicon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="scene" aria-hidden="true"></div>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="bar panel-box">
+    <a class="home" href="https://cesferort.github.io/" target="_blank" rel="noopener">
+      <span class="home-arrow" aria-hidden="true"></span>Cesferort
+    </a>
+    <input class="menu-check" id="menu-check" type="checkbox">
+    <label class="menu-toggle" for="menu-check"><span class="visually-hidden">Menu</span><span class="burger" aria-hidden="true"></span></label>
+    <nav class="nav" aria-label="Pages">
+      <a href="../en.html">Home</a>
+      <a href="en.html" aria-current="page">Privacy</a>
+      <span class="langs">
+        <a href="es.html" lang="es" hreflang="es" class="flag flag-es" aria-label="Spanish"><svg class="flag-svg" viewBox="0 0 22 15" aria-hidden="true"><rect width="22" height="15" fill="#c60b1e"/><rect y="4" width="22" height="7" fill="#ffc400"/></svg></a>
+        <a href="eu.html" lang="eu" hreflang="eu" class="flag flag-eu" aria-label="Basque"><svg class="flag-svg" viewBox="0 0 22 15" aria-hidden="true"><rect width="22" height="15" fill="#da291c"/><path fill="#009b48" d="M0 0h4.2L22 12.2V15h-4.2L0 2.8z"/><path fill="#009b48" d="M22 0h-4.2L0 12.2V15h4.2L22 2.8z"/><rect x="9.2" width="3.6" height="15" fill="#fff"/><rect y="5.7" width="22" height="3.6" fill="#fff"/></svg></a>
+        <a href="en.html" lang="en" aria-current="page" class="flag flag-en" aria-label="English"><svg class="flag-svg" viewBox="0 0 60 30" aria-hidden="true"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#fff" stroke-width="6" d="M0 0l60 30m0-30L0 30"/><path stroke="#C8102E" stroke-width="4" d="M0 0l60 30m0-30L0 30"/><path stroke="#fff" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="#C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></svg></a>
+      </span>
+    </nav>
+  </header>
+  <main id="content">
+    <article class="panel panel-box page">
+      <h1>Privacy policy</h1>
+      <p class="updated">Wishwell for Steam · updated 20 November 2026</p>
+
+      <h2>Short version</h2>
+      <p>Wishwell has no server. There is no account to create, nothing to sign in to, and no analytics of any kind. Everything the extension stores stays in your browser, and the only connections it makes are the price and data queries it needs to fill the panel.</p>
+      <p>I do not learn which games are on your list, what you search for, or what you buy.</p>
+
+      <h2>What is stored, and where</h2>
+      <p>In your <strong>synced browser settings</strong> (<code>chrome.storage.sync</code>): your preferences (theme, density, language, price region, default sort, filters, alerts) and, if you choose to use one, your IsThereAnyDeal key. Chrome copies them between your devices with your Google account. I never see them.</p>
+      <p>In <strong>local browser storage</strong> (<code>chrome.storage.local</code>): a temporary copy of the wishlist you are looking at, and a cache of the responses from the data sources so the same request is not repeated. None of it leaves your machine, and it is cleared by the cache button in Options, or by uninstalling the extension.</p>
+
+      <h2>Permissions, and why</h2>
+      <ul>
+        <li><strong><code>storage</code></strong> - to keep what is described above.</li>
+        <li><strong><code>alarms</code></strong> - to schedule the periodic deal check. Without it, price alerts cannot exist.</li>
+        <li><strong><code>notifications</code></strong> - to show that alert when a game drops in price. Only used if you turn alerts on.</li>
+        <li><strong><code>tabs</code></strong> - to find the tabs you have open on your wishlist so the panel can refresh, and to open the right tab when you click a notification. Your history and the tabs of other sites are not read.</li>
+        <li><strong><code>scripting</code></strong> - to inject the panel if Chrome's normal mechanism fails to do it in that tab. It is a fallback, and it only targets the Steam wishlist page.</li>
+        <li><strong><code>cookies</code></strong> - to read exactly two Steam cookies and no others. <code>steamLoginSecure</code>, from which <em>only</em> your 17-digit numeric identifier is taken, so the extension knows whose list to ask for; the rest of the value, which is the session token, is discarded immediately and is never stored or sent anywhere. And <code>steamCountry</code>, so prices show in the currency and region Steam is already applying to you, instead of defaulting everyone to dollars.</li>
+        <li><strong><code>declarativeNetRequestWithHostAccess</code></strong> - to set a few headers the browser will not let the extension set by hand, on the requests to HowLongToBeat and CheapShark. It only affects what the extension itself asks for. Your normal browsing is left alone.</li>
+      </ul>
+
+      <h2>Which services it talks to</h2>
+      <p>Always from your browser, never through an intermediary:</p>
+      <ul>
+        <li><strong>Steam</strong> (<code>store.steampowered.com</code>, <code>api.steampowered.com</code>, <code>steamcommunity.com</code> and their CDNs) - your public wishlist, each game's details, prices for your region, and the artwork.</li>
+        <li><strong>HowLongToBeat</strong> - how long each game takes. Queried by name.</li>
+        <li><strong>CheapShark</strong> - deals at other stores. Queried by Steam identifier.</li>
+        <li><strong>ProtonDB</strong> - the Linux and Steam Deck compatibility rating.</li>
+        <li><strong>IsThereAnyDeal</strong> - optional, and only if you paste your own free key in Options. With that field empty, the extension never contacts them.</li>
+      </ul>
+      <p>These services receive only what they need in order to answer: game identifiers or names and, in Steam's case, your public identifier. None of them receives your preferences or your keys, except IsThereAnyDeal, which receives its own because that is how you authenticate with them. Each has its own privacy policy, and Wishwell does not control what they do with the requests they receive.</p>
+
+      <h2>What it does not do</h2>
+      <ul>
+        <li>No analytics, no telemetry, no usage tracking.</li>
+        <li>No data is sold, rented or shared, because none is collected.</li>
+        <li>No advertising, no affiliate links, nothing that changes where you end up buying.</li>
+        <li>I only look at the tab with your Steam wishlist. Other pages are not read.</li>
+      </ul>
+
+      <h2>How to erase all of it</h2>
+      <p>Clearing the cache and removing the key from Options leaves the extension as if freshly installed. Uninstalling it deletes absolutely everything it has stored, synced settings included.</p>
+
+      <h2>Changes and contact</h2>
+      <p>If this policy changes, the date above changes with it. The code is GPL-3.0, so anyone can check that what is written here is what it does.</p>
+      <p>For any privacy question, or to ask for access, correction or deletion of anything you think concerns you, write to <a href="mailto:cesferort99@gmail.com">cesferort99@gmail.com</a>. I am César Ferreiro. Who I am and what I do is on <a href="https://cesferort.github.io/about/en.html" target="_blank" rel="noopener">my page</a>.</p>
+
+      <p class="legal-note">Wishwell for Steam is not a Valve Corporation product. Steam and Steam Deck are trademarks of Valve Corporation.</p>
+    </article>
+  </main>
+  <footer>
+    <p>© 2026 César Ferreiro · <a href="../en.html">Wishwell for Steam</a></p>
+  </footer>
+</body>
+</html>
