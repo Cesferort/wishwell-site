@@ -60,7 +60,7 @@
         <li><strong><code>tabs</code></strong> - localizar las pestañas abiertas en tu lista de deseos para refrescar el panel, y abrir la pestaña correspondiente cuando pulsas una notificación. No se lee tu historial ni las pestañas de otras páginas.</li>
         <li><strong><code>scripting</code></strong> - inyectar el panel si el mecanismo normal de Chrome no llega a hacerlo en esa pestaña. Es una vía de respaldo, y sólo apunta a la página de lista de deseos de Steam.</li>
         <li><strong><code>cookies</code></strong> - leer exactamente dos cookies de Steam, y ninguna más. <code>steamLoginSecure</code>, de la que se extrae <em>sólo</em> tu identificador numérico de 17 dígitos, para saber de quién es la lista que hay que pedir; el resto del valor, que es el testigo de sesión, se descarta en el acto y no se guarda ni se envía a ninguna parte. Y <code>steamCountry</code>, para enseñarte los precios en la moneda y la región que Steam ya te está aplicando, en vez de dólares por defecto.</li>
-        <li><strong><code>declarativeNetRequestWithHostAccess</code></strong> - ajustar unas cabeceras que el navegador no deja poner a mano, en las consultas a HowLongToBeat y a CheapShark. Sólo afecta a lo que pide la propia extensión. Tu navegación normal no se toca.</li>
+        <li><strong><code>declarativeNetRequestWithHostAccess</code></strong> - ajustar unas cabeceras que el navegador no deja poner a mano, en las consultas a HowLongToBeat. Sólo afecta a lo que pide la propia extensión. Tu navegación normal no se toca.</li>
       </ul>
 
       <h2>A qué servicios se conecta</h2>
@@ -68,9 +68,8 @@
       <ul>
         <li><strong>Steam</strong> (<code>store.steampowered.com</code>, <code>api.steampowered.com</code>, <code>steamcommunity.com</code> y sus CDN) - tu lista de deseos pública, los datos de cada juego, los precios de tu región y las imágenes.</li>
         <li><strong>HowLongToBeat</strong> - cuánto dura cada juego. Se consulta por nombre.</li>
-        <li><strong>CheapShark</strong> - ofertas en otras tiendas. Se consulta por identificador de Steam.</li>
         <li><strong>ProtonDB</strong> - la valoración de compatibilidad con Linux y Steam Deck.</li>
-        <li><strong>IsThereAnyDeal</strong> - opcional, y sólo si pegas tu propia clave gratuita en Opciones. Si el campo está vacío, la extensión no contacta con ellos nunca.</li>
+        <li><strong>IsThereAnyDeal</strong> - ofertas en otras tiendas y el mínimo histórico. Sólo si pegas tu propia clave gratuita en Opciones. Si el campo está vacío, la extensión no contacta con ellos nunca.</li>
       </ul>
       <p>A estos servicios sólo les llega lo imprescindible para responder: identificadores o nombres de juegos y, en el caso de Steam, tu identificador público. Ninguno recibe tus preferencias ni tus claves, salvo IsThereAnyDeal, que recibe la suya porque es la forma de autenticarte ante ellos. Cada uno tiene su propia política de privacidad y Wishwell no controla lo que hagan con las peticiones que reciben.</p>
 

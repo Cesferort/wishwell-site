@@ -60,7 +60,7 @@
         <li><strong><code>tabs</code></strong> - to find the tabs you have open on your wishlist so the panel can refresh, and to open the right tab when you click a notification. Your history and the tabs of other sites are not read.</li>
         <li><strong><code>scripting</code></strong> - to inject the panel if Chrome's normal mechanism fails to do it in that tab. It is a fallback, and it only targets the Steam wishlist page.</li>
         <li><strong><code>cookies</code></strong> - to read exactly two Steam cookies and no others. <code>steamLoginSecure</code>, from which <em>only</em> your 17-digit numeric identifier is taken, so the extension knows whose list to ask for; the rest of the value, which is the session token, is discarded immediately and is never stored or sent anywhere. And <code>steamCountry</code>, so prices show in the currency and region Steam is already applying to you, instead of defaulting everyone to dollars.</li>
-        <li><strong><code>declarativeNetRequestWithHostAccess</code></strong> - to set a few headers the browser will not let the extension set by hand, on the requests to HowLongToBeat and CheapShark. It only affects what the extension itself asks for. Your normal browsing is left alone.</li>
+        <li><strong><code>declarativeNetRequestWithHostAccess</code></strong> - to set a few headers the browser will not let the extension set by hand, on the requests to HowLongToBeat. It only affects what the extension itself asks for. Your normal browsing is left alone.</li>
       </ul>
 
       <h2>Which services it talks to</h2>
@@ -68,9 +68,8 @@
       <ul>
         <li><strong>Steam</strong> (<code>store.steampowered.com</code>, <code>api.steampowered.com</code>, <code>steamcommunity.com</code> and their CDNs) - your public wishlist, each game's details, prices for your region, and the artwork.</li>
         <li><strong>HowLongToBeat</strong> - how long each game takes. Queried by name.</li>
-        <li><strong>CheapShark</strong> - deals at other stores. Queried by Steam identifier.</li>
         <li><strong>ProtonDB</strong> - the Linux and Steam Deck compatibility rating.</li>
-        <li><strong>IsThereAnyDeal</strong> - optional, and only if you paste your own free key in Options. With that field empty, the extension never contacts them.</li>
+        <li><strong>IsThereAnyDeal</strong> - deals at other stores and the all-time low. Only if you paste your own free key in Options. With that field empty, the extension never contacts them.</li>
       </ul>
       <p>These services receive only what they need in order to answer: game identifiers or names and, in Steam's case, your public identifier. None of them receives your preferences or your keys, except IsThereAnyDeal, which receives its own because that is how you authenticate with them. Each has its own privacy policy, and Wishwell does not control what they do with the requests they receive.</p>
 
